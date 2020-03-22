@@ -21,7 +21,11 @@ export class YogaLayout {
     public readonly node: Yoga.YogaNode;
     public children: YogaLayout[] = [];
     public parent?: YogaLayout;
-    public rescale: boolean = false;
+
+    /**
+     * True if Yoga should manage PIXI objects width/height
+     */
+    public rescaleToYoga: boolean = false;
 
     private _width: PixelsOrPercentage | "pixi";
     private _height: PixelsOrPercentage | "pixi";
@@ -61,9 +65,13 @@ export class YogaLayout {
         Object.assign(this, config);
     }
 
+    public set config(config: YogaLayoutConfig) {
+        this.fromConfig(config);
+    }
+
     public copy(layout: YogaLayout): void {
         this.node.copyStyle(layout.node);
-        this.rescale = layout.rescale;
+        this.rescaleToYoga = layout.rescaleToYoga;
         this.aspectRatio = layout.aspectRatio;
         this._width = layout._width;
         this._height = layout._height;
@@ -81,7 +89,7 @@ export class YogaLayout {
         if (yoga.parent) {
             yoga.parent.removeChild(yoga);
         }
-        this.node.insertChild(yoga.node, this.node.getChildCount())
+        this.node.insertChild(yoga.node, index)
         this.children.splice(index, 0, yoga);
         yoga.parent = this;
     }
@@ -93,6 +101,9 @@ export class YogaLayout {
         yoga.parent = undefined;
     }
 
+    /**
+     * Mark object as dirty and request layout recalculation
+     */
     public requestLayoutUpdate(): void {
         this.target.emit(YogaLayout.NEED_LAYOUT_UPDATE);
     }
@@ -101,7 +112,7 @@ export class YogaLayout {
         const start = performance.now()
         this.node.calculateLayout();
         this._lastRecalculationDuration = performance.now() - start;
-        console.log("recalculated: ", this._lastRecalculationDuration, this)
+        // console.log("recalculated: ", this._lastRecalculationDuration, this)
         this.target.emit(YogaLayout.LAYOUT_UPDATED_EVENT);
     }
 
