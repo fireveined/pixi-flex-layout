@@ -2,9 +2,6 @@ import { DisplayObject } from "pixi.js";
 import { YogaLayout } from "./YogaLayout";
 
 declare module "pixi.js" {
-
-    import { YogaLayout } from "./YogaLayout";
-
     export interface DisplayObject {
         yoga: YogaLayout;
 
@@ -12,7 +9,6 @@ declare module "pixi.js" {
 
         checkIfBoundingBoxChanged(): void;
     }
-
 }
 
 export function applyDisplayObjectPolyfill() {

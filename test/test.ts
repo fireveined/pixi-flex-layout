@@ -1,9 +1,4 @@
 import "pixi.js"
-import bigImg from './big.png'
-import { YogaLayoutConfig } from "../src/YogaLayoutConfig";
-import * as CM from "./lib/codemirror"
-import * as JS from "./mode/javascript/javascript"
-import NineSlicePlane = PIXI.mesh.NineSlicePlane;
 import { createExample } from "./testRunner";
 import { justifyContentExample } from "./justifyContentExample";
 
@@ -38,9 +33,6 @@ import { justifyContentExample } from "./justifyContentExample";
 //     }
 //     currentContainer.addChild(obj);
 // }
-
-
-
 
 
 createExample(justifyContentExample)

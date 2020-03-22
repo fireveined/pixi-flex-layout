@@ -3,4 +3,4 @@ src/*.js
 .idea
 .cache
 dist
-lib
+test

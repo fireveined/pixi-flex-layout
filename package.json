@@ -1,15 +1,16 @@
 {
   "name": "pixi-yoga-layout",
+  "author": "Matuesz Szymik@Fireveined",
   "version": "0.8.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Flex layouts for pixi.js powered by Yoga",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "start": "parcel serve test/test.html",
-    "build:test": "tsc test/test.ts && browserify test/test.js -o test/bundle.js",
+    "build": "tsc",
     "watch": "parcel watch test/test.html"
   },
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/yoga-layout": "^1.9.1",
     "@types/pixi.js": "^4.8.5",
