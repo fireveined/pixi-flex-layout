@@ -3,3 +3,7 @@ node_modules
 .idea
 .cache
 dist
+pack*
+src
+test
+tsconfig.json
