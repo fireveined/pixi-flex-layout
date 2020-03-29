@@ -80,7 +80,6 @@ obj.yoga.height = "pixi"; // use value from PIXIobject.height property
 ```
 ### Todos
 
- - Support for PIXI 5
  - Build and use new Yoga version (current yoga-layout-prebuilt is quite old)
  - More readable doc with examples
  - Support for font baselines
