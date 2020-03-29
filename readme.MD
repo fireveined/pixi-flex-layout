@@ -2,7 +2,7 @@
 
 [![NPM Version][npm-image]][npm-url]
 
-Flex layouts for pixi.js powered by [Yoga](https://yogalayout.com/)
+Flex layouts for pixi.js (both v4 and v5) powered by [Yoga](https://yogalayout.com/)
 ![example](test/space-around.png)
 # Installation
 
