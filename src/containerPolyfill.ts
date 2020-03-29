@@ -65,6 +65,7 @@ export function applyContainerPolyfill() {
             const child = children[0];
             if (this.flex) {
                 child.yoga = child.yoga || new YogaLayout(child);
+                child.__hasYoga = true;
                 this.yoga.addChild(child.yoga);
             }
 
@@ -80,6 +81,7 @@ export function applyContainerPolyfill() {
     Container.prototype.addChildAt = function (child, index) {
         if (this.flex) {
             child.yoga = child.yoga || new YogaLayout(child);
+            this.__hasYoga = true;
             this.yoga.addChild(child.yoga, index);
         }
 
@@ -116,7 +118,7 @@ export function applyContainerPolyfill() {
 
 
     Container.prototype.updateTransform = function () {
-        if (this.yoga && this.yoga.isRoot) {
+        if ((this.flex || this.flexRecursive || this.__hasYoga) && this.yoga.isRoot) {
             this.checkIfBoundingBoxChanged();
             this.updateYogaLayout();
         }

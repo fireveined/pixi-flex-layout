@@ -15,6 +15,7 @@ type PixelsOrPercentage = number | string;
 
 export class YogaLayout {
 
+    public static roots: Map<string, YogaLayout> = new Map();
     public static readonly LAYOUT_UPDATED_EVENT = "LAYOUT_UPDATED_EVENT";
     public static readonly NEED_LAYOUT_UPDATE = "NEED_LAYOUT_UPDATE";
     public readonly target: DisplayObject;
@@ -37,6 +38,7 @@ export class YogaLayout {
 
     constructor(pixiObject: DisplayObject = new DisplayObject()) {
         this.node = Yoga.Node.create();
+        pixiObject.__hasYoga = true;
         this.fillDefaults();
         this.target = pixiObject;
 
@@ -59,6 +61,13 @@ export class YogaLayout {
                 this.parent.target.emit(YogaLayout.NEED_LAYOUT_UPDATE)
             }
         })
+    }
+
+    public set root(val: string) {
+        const root = YogaLayout.roots.get(val);
+        if (root) {
+            root.addChild(this);
+        }
     }
 
     public fromConfig(config: YogaLayoutConfig) {
