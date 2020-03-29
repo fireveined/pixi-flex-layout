@@ -1,7 +1,5 @@
-import { DisplayObject } from "pixi.js";
 import { YogaLayout } from "./YogaLayout";
 import Container = PIXI.Container;
-import * as Yoga from "yoga-layout";
 
 declare module "pixi.js" {
     export interface Container {
@@ -93,12 +91,15 @@ export function applyContainerPolyfill() {
     }
 
 
-    Container.prototype.removeChild = function (child) {
-        if (this.flex) {
-            this.yoga.removeChild(child.yoga);
+    Container.prototype.removeChild = function (...children) {
+        if (children.length === 1) {
+            const child = children[0];
+            if (this.flex) {
+                this.yoga.removeChild(child.yoga);
+            }
+            this.emit(YogaLayout.NEED_LAYOUT_UPDATE);
         }
-        this.emit(YogaLayout.NEED_LAYOUT_UPDATE);
-        return removeChild.call(this, child) as any;
+        return removeChild.call(this, ...children) as any;
     }
 
     Container.prototype.removeChildren = function (beginIndex, endIndex) {

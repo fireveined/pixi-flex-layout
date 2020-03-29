@@ -1,7 +1,7 @@
 import { DisplayObject } from "pixi.js";
 import { YogaLayout } from "./YogaLayout";
 import { YogaConstants } from "./YogaContants";
-const NineSlicePlane = PIXI.NineSlicePlane || PIXI.mesh.NineSlicePlane;
+const NineSlicePlane = (<any>PIXI).NineSlicePlane || (<any>PIXI).mesh.NineSlicePlane;
 
 declare module "pixi.js" {
     export interface DisplayObject {
@@ -67,8 +67,8 @@ export function applyDisplayObjectPolyfill() {
             let th = Math.abs(this.yoga.rescaleToYoga ? 1 : this.scale.y) * texture.orig.height;
 
             if (!this.yoga.rescaleToYoga && this instanceof NineSlicePlane) {
-                tw = this.width;
-                th = this.height;
+                tw = (<any>this).width;
+                th = (<any>this).height;
             }
             if (this.yoga.rescaleToYoga && (this instanceof PIXI.Text || this instanceof PIXI.Sprite)) {
                 this.yoga.aspectRatio = (texture.orig.width / texture.orig.height)
