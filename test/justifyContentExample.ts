@@ -21,7 +21,7 @@ const button = new PIXI.Container();
 button.yoga.fromConfig(buttonStyle);
 
 const buttonText = new PIXI.Text();
-const background = new PIXI.mesh.NineSlicePlane(PIXI.Texture.fromImage(bigImgPath), 7, 7, 7, 7)
+const background = new PIXI.NineSlicePlane(PIXI.Texture.from(bigImgPath), 7, 7, 7, 7)
 background.yoga.fromConfig(buttonBackgroundStyle);
 background.yoga.rescaleToYoga = true; // set PIXI width/height to math Yoga layout
 button.addChild(background, buttonText);

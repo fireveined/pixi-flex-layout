@@ -1,9 +1,16 @@
 {
   "name": "pixi-flex-layout",
   "author": "Matuesz Szymik@Fireveined",
-  "version": "0.8.3",
+  "version": "0.8.15",
   "description": "Flex layouts for pixi.js powered by Yoga",
-  "keywords": ["pixi.js", "pixi", "layout", "ui", "flex", "yoga"],
+  "keywords": [
+    "pixi.js",
+    "pixi",
+    "layout",
+    "ui",
+    "flex",
+    "yoga"
+  ],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "repository": {
@@ -18,12 +25,12 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/yoga-layout": "^1.9.1",
     "@types/pixi.js": "^4.8.5",
+    "@types/yoga-layout": "^1.9.1",
     "javascript-editor": "^1.0.3",
     "parcel-bundler": "^1.12.4",
-    "typescript": "^3.8.3",
-    "pixi.js": "^4.8.5"
+    "pixi.js": "*",
+    "typescript": "^3.8.3"
   },
   "peerDependencies": {},
   "dependencies": {

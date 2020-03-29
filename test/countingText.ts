@@ -1,3 +1,4 @@
+
 export class CountingText extends PIXI.Text {
 
     public interval: any;

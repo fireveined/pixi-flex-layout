@@ -1,10 +1,11 @@
 import "pixi.js"
+import { initializeYogaLayout } from "../src";
 import bigImg from './big.png'
 import smallImg from './small.png'
 import * as CM from "./lib/codemirror"
 import "./mode/javascript/javascript"
 import { CountingText as CountingTextImport } from "./countingText";
-import { initializeYogaLayout } from "../src";
+
 
 const CountingText = CountingTextImport;
 const CodeMirror = CM.default;
@@ -18,7 +19,8 @@ export function createExample(code: string) {
 
     initializeYogaLayout();
     const canvas = document.querySelector("canvas");
-    var app = new PIXI.Application(800, 300, {
+    var app = new PIXI.Application({
+        width: 800, height: 300,
         backgroundColor: 0x1099bb,
         autoStart: true,
         sharedTicker: true,

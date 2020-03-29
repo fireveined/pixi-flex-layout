@@ -1,7 +1,7 @@
 import { DisplayObject } from "pixi.js";
 import { YogaLayout } from "./YogaLayout";
 import { YogaConstants } from "./YogaContants";
-import NineSlicePlane = PIXI.mesh.NineSlicePlane;
+const NineSlicePlane = PIXI.NineSlicePlane || PIXI.mesh.NineSlicePlane;
 
 declare module "pixi.js" {
     export interface DisplayObject {

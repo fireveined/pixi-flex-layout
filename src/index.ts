@@ -1,3 +1,8 @@
+import * as PIXI from "pixi.js";
+if(!(<any>window).PIXI){
+    (<any>window).PIXI =  PIXI;
+}
+
 import { applyContainerPolyfill } from "./containerPolyfill";
 import { applyDisplayObjectPolyfill } from "./displayObjectPolyfill";
 
