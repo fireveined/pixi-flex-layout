@@ -7,10 +7,20 @@ const NineSlicePlane = (<any>PIXI).NineSlicePlane || (<any>PIXI).mesh.NineSliceP
 declare module "pixi.js" {
     export interface DisplayObject {
         yoga: YogaLayout;
+
+        /**
+         * Internal property for fast checking if object has yoga
+         */
         __hasYoga: boolean;
 
+        /**
+         * Applies yoga layout to DisplayObject
+         */
         updateYogaLayout(): void;
 
+        /**
+         * Checks boundaries of DisplayObject and emits NEED_LAYOUT_UPDATE if needed
+         */
         checkIfBoundingBoxChanged(): void;
     }
 

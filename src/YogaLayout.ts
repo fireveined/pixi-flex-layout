@@ -11,11 +11,14 @@ import FlexWrap = YogaConstants.FlexWrap;
 import Display = YogaConstants.Display;
 import PositionType = YogaConstants.PositionType;
 
-type PixelsOrPercentage = number | string;
-type YogaSize = PixelsOrPercentage | "pixi" | "auto";
+export type PixelsOrPercentage = number | string;
+export type YogaSize = PixelsOrPercentage | "pixi" | "auto";
 
 export class YogaLayout {
 
+    /**
+     * Experimental feature for building layouts independent of pixi tree
+     */
     public static roots: Map<string, YogaLayout> = new Map();
     public static readonly LAYOUT_UPDATED_EVENT = "LAYOUT_UPDATED_EVENT";
     public static readonly NEED_LAYOUT_UPDATE = "NEED_LAYOUT_UPDATE";
@@ -33,8 +36,15 @@ export class YogaLayout {
     private _height: YogaSize;
     private _cachedLayout: ComputedLayout | undefined;
     private _lastRecalculationDuration = 0;
+
+    /**
+     * Will be recalculated in next frame
+     */
     private _needUpdateAsRoot: boolean = false;
 
+    /**
+     * Used instead of Yoga.AspectRatio because of Yoga issue https://github.com/facebook/yoga/issues/677
+     */
     private _aspectRatio: number;
 
     constructor(pixiObject: DisplayObject = new DisplayObject()) {
@@ -72,14 +82,26 @@ export class YogaLayout {
         }
     }
 
+    /**
+     * Assigns given properties to this yoga layout
+     * @param config
+     */
     public fromConfig(config: YogaLayoutConfig) {
         Object.assign(this, config);
     }
 
+    /**
+     * Same as 'fromConfig()'
+     * @param config
+     */
     public set config(config: YogaLayoutConfig) {
         this.fromConfig(config);
     }
 
+    /**
+     * Copies all properties (styles, size, rescaleToYoga etc) from other YogaLayout objects
+     * @param layout
+     */
     public copy(layout: YogaLayout): void {
         this.node.copyStyle(layout.node);
         this.rescaleToYoga = layout.rescaleToYoga;
@@ -190,14 +212,28 @@ export class YogaLayout {
         return this._height === "pixi"
     }
 
+    /**
+     * Returns computed width in pixels
+     */
     public get calculatedWidth(): number {
         return this._cachedLayout ? this._cachedLayout.width : this.node.getComputedWidth();
     }
 
+    /**
+     * Returns computed height in pixels
+     */
     public get calculatedHeight(): number {
         return this._cachedLayout ? this._cachedLayout.height : this.node.getComputedHeight();
     }
 
+    /**
+     * Can handle:
+     * - pixels (eg 150)
+     * - percents ("50%")
+     * - "auto" to use values from yoga
+     * - "pixi" to use DisplayObject.width/height
+     * @param value
+     */
     public set width(value: YogaSize) {
         this._width = value;
         if (value !== "pixi") {
@@ -210,6 +246,14 @@ export class YogaLayout {
         return this._parseValue(this.node.getWidth());
     }
 
+    /**
+     * Can handle:
+     * - pixels (eg 150)
+     * - percents ("50%")
+     * - "auto" to use values from yoga
+     * - "pixi" to use DisplayObject.width/height
+     * @param value
+     */
     public set height(value: YogaSize) {
         this._height = value;
         if (value !== "pixi") {

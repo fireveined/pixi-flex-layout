@@ -10,6 +10,10 @@ export { YogaLayout } from "./YogaLayout";
 export { YogaLayoutConfig } from "./YogaLayoutConfig";
 export * from "./YogaContants";
 
+/**
+ * Polyfills PIXI.DisplayObject and PIXI.Container
+ *
+ */
 export function initializeYogaLayout() {
     applyDisplayObjectPolyfill();
     applyContainerPolyfill();

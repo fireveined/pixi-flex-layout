@@ -21,7 +21,8 @@
     "start": "parcel serve test/test.html",
     "bundle:examples": "parcel build test/test.html",
     "build": "tsc",
-    "watch": "parcel watch test/test.html"
+    "watch": "parcel watch test/test.html",
+    "generate-doc": "rimraf -f doc/* && typedoc --out doc/ src/index.ts --ignoreCompilerErrors --mode file  --excludeNotExported --exclude 'test/*' --exclude 'node_modules/'"
   },
   "license": "MIT",
   "devDependencies": {
@@ -30,6 +31,7 @@
     "javascript-editor": "^1.0.3",
     "parcel-bundler": "^1.12.4",
     "pixi.js": "^4.8.5",
+    "typedoc": "^0.17.3",
     "typescript": "^3.8.3"
   },
   "peerDependencies": {},
