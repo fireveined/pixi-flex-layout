@@ -112,8 +112,8 @@ export function applyContainerPolyfill() {
                 const removed = this.children.slice(begin, range);
                 removed.forEach(child => this.yoga.removeChild(child.yoga))
             }
+            this.emit(YogaLayout.NEED_LAYOUT_UPDATE);
         }
-        this.emit(YogaLayout.NEED_LAYOUT_UPDATE);
         return removeChildren.call(this, beginIndex, endIndex) as any;
     }
 

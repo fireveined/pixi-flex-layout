@@ -1,6 +1,7 @@
 import { DisplayObject } from "pixi.js";
 import { YogaLayout } from "./YogaLayout";
-import { YogaConstants } from "./YogaContants";
+import TransformStatic = PIXI.TransformStatic;
+
 const NineSlicePlane = (<any>PIXI).NineSlicePlane || (<any>PIXI).mesh.NineSlicePlane;
 
 declare module "pixi.js" {
@@ -12,7 +13,13 @@ declare module "pixi.js" {
 
         checkIfBoundingBoxChanged(): void;
     }
+
+    interface DisplayObject {
+        _yogaLayoutHash: number;
+        _prevYogaLayoutHash: number;
+    }
 }
+
 
 export function applyDisplayObjectPolyfill() {
 
@@ -52,13 +59,14 @@ export function applyDisplayObjectPolyfill() {
     }
 
     DisplayObject.prototype.checkIfBoundingBoxChanged = function (this: DisplayObject) {
-        if (this instanceof PIXI.Text) {
+        if ((this as any).updateText) {
             (this as any).updateText(true);
         }
 
         this.yoga.children.forEach(child => {
             child.target.checkIfBoundingBoxChanged();
         })
+
         const texture: PIXI.Texture = (this as any)._texture;
         const bounds = (this as any)._boundsRect;
 
@@ -69,15 +77,15 @@ export function applyDisplayObjectPolyfill() {
             if (!this.yoga.rescaleToYoga && this instanceof NineSlicePlane) {
                 tw = (<any>this).width;
                 th = (<any>this).height;
-            }
-            if (this.yoga.rescaleToYoga && (this instanceof PIXI.Text || this instanceof PIXI.Sprite)) {
+            } else if (this.yoga.rescaleToYoga && (this instanceof PIXI.Text || this instanceof PIXI.Sprite)) {
                 this.yoga.aspectRatio = (texture.orig.width / texture.orig.height)
             }
-            (this as any).__layoutHash = tw * 0.12498 + th * 121;
-            if ((this as any).__layoutHash !== (this as any).__oldHash) {
+
+            this._yogaLayoutHash = tw * 0.12498 + th * 4121;
+            if (this._yogaLayoutHash !== this._prevYogaLayoutHash) {
                 this.emit(YogaLayout.NEED_LAYOUT_UPDATE);
             }
-            (this as any).__oldHash = (this as any).__layoutHash;
+            this._prevYogaLayoutHash = this._yogaLayoutHash;
 
             this.yoga.isWidthCalculatedFromPixi && this.yoga.node.setWidth(tw);
             this.yoga.isHeightCalculatedFromPixi && this.yoga.node.setHeight(th);
@@ -92,13 +100,12 @@ export function applyDisplayObjectPolyfill() {
         this.yoga.update();
         const layout = this.yoga.computedLayout;
 
-        (<any>this.transform).position.x = layout.left;
-        (<any>this.transform).position.y = layout.top;
+        (this.transform as TransformStatic).position.x = layout.left;
+        (this.transform as TransformStatic).position.y = layout.top;
 
-        const texture: PIXI.Texture = (this as any)._texture;
         if (this.yoga.rescaleToYoga) {
-            ((<any>this).width = layout.width);
-            ((<any>this).height = layout.height);
+            (<any>this).width = layout.width;
+            (<any>this).height = layout.height;
         }
 
         this.yoga.children.forEach(child => {

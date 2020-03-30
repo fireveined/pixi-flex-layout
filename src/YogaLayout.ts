@@ -12,6 +12,7 @@ import Display = YogaConstants.Display;
 import PositionType = YogaConstants.PositionType;
 
 type PixelsOrPercentage = number | string;
+type YogaSize = PixelsOrPercentage | "pixi" | "auto";
 
 export class YogaLayout {
 
@@ -28,8 +29,8 @@ export class YogaLayout {
      */
     public rescaleToYoga: boolean = false;
 
-    private _width: PixelsOrPercentage | "pixi";
-    private _height: PixelsOrPercentage | "pixi";
+    private _width: YogaSize;
+    private _height: YogaSize;
     private _cachedLayout: ComputedLayout | undefined;
     private _lastRecalculationDuration = 0;
     private _needUpdateAsRoot: boolean = false;
@@ -55,6 +56,7 @@ export class YogaLayout {
         })
 
         pixiObject.on(YogaLayout.NEED_LAYOUT_UPDATE as any, () => {
+            // size change of this element wont change size/positions of its parent, so there is no need to update whole tree
             if (!this.parent || (this.hasContantDeclaredSize && this.parent.width !== "auto" && this.parent.height !== "auto")) {
                 this._needUpdateAsRoot = true;
             } else {
@@ -157,18 +159,6 @@ export class YogaLayout {
                 this._cachedLayout.height = Math.round(parseFloat(this._height as string) / 100 * this.parent.calculatedHeight)
             }
 
-            if (this.position === "absolute" && this.parent) {
-                this._cachedLayout.left = this.node.getComputedMargin(Yoga.EDGE_LEFT);
-                this._cachedLayout.top = this.node.getComputedMargin(Yoga.EDGE_TOP)
-            }
-
-
-            // YOGA FIX for padding
-            // this._cachedLayout.width += this.node.getComputedPadding(Yoga.EDGE_LEFT);
-            // this._cachedLayout.height += this.node.getComputedPadding(Yoga.EDGE_TOP);
-            // this._cachedLayout.left -= this.node.getComputedPadding(Yoga.EDGE_LEFT);
-            // this._cachedLayout.top -= this.node.getComputedPadding(Yoga.EDGE_TOP);
-
             // YOGA FIX for not working aspect ratio https://github.com/facebook/yoga/issues/677
             if (this._aspectRatio) {
                 const newHeight = this.calculatedWidth / this._aspectRatio;
@@ -208,7 +198,7 @@ export class YogaLayout {
         return this._cachedLayout ? this._cachedLayout.height : this.node.getComputedHeight();
     }
 
-    public set width(value: PixelsOrPercentage) {
+    public set width(value: YogaSize) {
         this._width = value;
         if (value !== "pixi") {
             this.node.setWidth(value);
@@ -216,11 +206,11 @@ export class YogaLayout {
         this.requestLayoutUpdate();
     }
 
-    public get width(): PixelsOrPercentage {
+    public get width(): YogaSize {
         return this._parseValue(this.node.getWidth());
     }
 
-    public set height(value: PixelsOrPercentage) {
+    public set height(value: YogaSize) {
         this._height = value;
         if (value !== "pixi") {
             this.node.setHeight(value);
@@ -228,7 +218,7 @@ export class YogaLayout {
         this.requestLayoutUpdate();
     }
 
-    public get height(): PixelsOrPercentage {
+    public get height(): YogaSize {
         return this._parseValue(this.node.getHeight());
     }
 
