@@ -1,1 +1,252 @@
-Hello!
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>pixi-flex-layout</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">pixi-flex-layout</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>pixi-flex-layout</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#pixi-flex-layout" id="pixi-flex-layout" style="color: inherit; text-decoration: none;">
+					<h1>pixi-flex-layout</h1>
+				</a>
+				<p><a href="https://npmjs.org/package/pixi-flex-layout"><img src="https://img.shields.io/npm/v/pixi-flex-layout.svg" alt="NPM Version"></a></p>
+				<p>Flex layouts for pixi.js (both v4 and v5) powered by <a href="https://yogalayout.com/">Yoga</a>
+				<img src="test/space-around.png" alt="example"></p>
+				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+					<h1>Installation</h1>
+				</a>
+				<pre><code>npm <span class="hljs-keyword">install</span> pixi-flex-layout <span class="hljs-comment">--save</span></code></pre>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h1>Usage</h1>
+				</a>
+				<pre><code class="language-javascript"><span class="hljs-keyword">import</span> { initializeYogaLayout } <span class="hljs-keyword">from</span> <span class="hljs-string">"pixi-flex-layout"</span>;
+initializeYogaLayout();
+
+<span class="hljs-keyword">const</span> containerStyle  = {
+    <span class="hljs-attr">justifyContent</span>: <span class="hljs-string">"space-between"</span>,
+    <span class="hljs-attr">flexWrap</span>: <span class="hljs-string">"wrap"</span>,
+    <span class="hljs-attr">width</span>: <span class="hljs-number">200</span>
+};
+
+<span class="hljs-keyword">const</span> container = <span class="hljs-keyword">new</span> PIXI.Container();
+container.flex = <span class="hljs-literal">true</span>;
+container.yoga.fromConfig(containerStyle)
+container.yoga.flexDirection = <span class="hljs-string">"row"</span>;
+
+<span class="hljs-keyword">for</span>(<span class="hljs-keyword">let</span> i =<span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>;i++){
+  <span class="hljs-keyword">const</span> foo = <span class="hljs-keyword">new</span> PIXI.Text(i+<span class="hljs-string">"00"</span>);
+  container.addChild(foo)
+}
+</code></pre>
+				<p>Live and editable examble can be found on <a href="https://fireveined.github.io/pixi-flex-layout/test.html">https://fireveined.github.io/pixi-flex-layout/test.html</a></p>
+				<a href="#initializing-flex" id="initializing-flex" style="color: inherit; text-decoration: none;">
+					<h4>Initializing flex</h4>
+				</a>
+				<p><em>PIXI.Container.flex: boolean</em></p>
+				<blockquote>
+					<p>True to enable flex layout for direct children of container</p>
+				</blockquote>
+				<p><em>PIXI.Container.flexRecursive: boolean</em></p>
+				<blockquote>
+					<p>True to enable flex layout for ALL children of container (eg. whole scene)</p>
+				</blockquote>
+				<a href="#setting-styles" id="setting-styles" style="color: inherit; text-decoration: none;">
+					<h4>Setting styles</h4>
+				</a>
+				<p>Styles can be se directly:</p>
+				<pre><code class="language-javascript">object.yoga.width = <span class="hljs-string">"50%"</span>;
+object.yoga.paddingTop = <span class="hljs-number">20</span>;
+object.yoga.alignItems = <span class="hljs-string">"center"</span>;</code></pre>
+				<p>Or using config</p>
+				<pre><code class="language-javascript"><span class="hljs-keyword">const</span> containerStyle: YogaLayoutConfig  = {
+    <span class="hljs-attr">justifyContent</span>: <span class="hljs-string">"space-between"</span>,
+    <span class="hljs-attr">flexWrap</span>: <span class="hljs-string">"wrap"</span>,
+    <span class="hljs-attr">width</span>: <span class="hljs-number">200</span>
+};
+object.yoga.fromConfig(containerStyle);</code></pre>
+				<p>All styles from <a href="https://yogalayout.com/">https://yogalayout.com/</a> are suported with shorthands for:</p>
+				<pre><code class="language-javascript">obj.yoga.padding = [<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">10</span>];
+obj.yoga.paddingAll = <span class="hljs-number">10</span>;  
+obj.yoga.paddingTop = <span class="hljs-number">30</span>;</code></pre>
+				<p>The same for <code>margin</code> and <code>border</code> properties.</p>
+				<a href="#size-controlling" id="size-controlling" style="color: inherit; text-decoration: none;">
+					<h4>Size controlling</h4>
+				</a>
+				<p><code>obj.yoga.rescaleToYoga: boolean</code> can be used and then pixi width/height will be controlled by yoga and set to match layout values.</p>
+				<p><code>obj.yoga.[width|height]</code> can take values: </p>
+				<pre><code class="language-js">obj.yoga.width = <span class="hljs-number">100</span>; <span class="hljs-comment">// pixels</span>
+obj.yoga.height = <span class="hljs-string">"30%"</span> <span class="hljs-comment">// 30% of parent</span>
+obj.yoga.width = <span class="hljs-string">"auto"</span>; <span class="hljs-comment">// default </span>
+obj.yoga.height = <span class="hljs-string">"pixi"</span>; <span class="hljs-comment">// use value from PIXIobject.height property </span></code></pre>
+				<a href="#todos" id="todos" style="color: inherit; text-decoration: none;">
+					<h3>Todos</h3>
+				</a>
+				<ul>
+					<li>Build and use new Yoga version (current yoga-layout-prebuilt is quite old)</li>
+					<li>More readable doc with examples</li>
+					<li>Support for font baselines</li>
+				</ul>
+				<a href="#known-bugs" id="known-bugs" style="color: inherit; text-decoration: none;">
+					<h3>Known bugs</h3>
+				</a>
+				<ul>
+					<li>minWidth/minHeight/maxWidth/maxHeight sometimes don&#39;t work as expected when commbined with position: absolute or paddings/margins (Yoga bug)</li>
+				</ul>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<p>MIT</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class="label tsd-is-external">
+						<span>Externals</span>
+					</li>
+					<li class=" tsd-kind-namespace tsd-is-external">
+						<a href="modules/_pixi_js_.html">&quot;pixi.js&quot;</a>
+					</li>
+					<li class=" tsd-kind-namespace tsd-is-external">
+						<a href="modules/yogaconstants.html">Yoga<wbr>Constants</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-is-external">
+						<a href="classes/yogalayout.html" class="tsd-kind-icon">Yoga<wbr>Layout</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-is-external">
+						<a href="globals.html#pixelsorpercentage" class="tsd-kind-icon">Pixels<wbr>OrPercentage</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-is-external">
+						<a href="globals.html#yogalayoutconfig" class="tsd-kind-icon">Yoga<wbr>Layout<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-is-external">
+						<a href="globals.html#yogasize" class="tsd-kind-icon">Yoga<wbr>Size</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="globals.html#align" class="tsd-kind-icon">Align</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="globals.html#computedlayout" class="tsd-kind-icon">Computed<wbr>Layout</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="globals.html#container" class="tsd-kind-icon">Container</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="globals.html#display" class="tsd-kind-icon">Display</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="globals.html#displayobject" class="tsd-kind-icon">Display<wbr>Object</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="globals.html#flexdirection" class="tsd-kind-icon">Flex<wbr>Direction</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="globals.html#flexwrap" class="tsd-kind-icon">Flex<wbr>Wrap</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="globals.html#justifycontent" class="tsd-kind-icon">Justify<wbr>Content</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="globals.html#ninesliceplane" class="tsd-kind-icon">Nine<wbr>Slice<wbr>Plane</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="globals.html#positiontype" class="tsd-kind-icon">Position<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="globals.html#transformstatic" class="tsd-kind-icon">Transform<wbr>Static</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="globals.html#yogaedges" class="tsd-kind-icon">Yoga<wbr>Edges</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
+						<a href="globals.html#applycontainerpolyfill" class="tsd-kind-icon">apply<wbr>Container<wbr>Polyfill</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
+						<a href="globals.html#applydisplayobjectpolyfill" class="tsd-kind-icon">apply<wbr>Display<wbr>Object<wbr>Polyfill</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#initializeyogalayout" class="tsd-kind-icon">initialize<wbr>Yoga<wbr>Layout</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

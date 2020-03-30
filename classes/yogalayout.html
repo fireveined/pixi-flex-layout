@@ -1,0 +1,2397 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>YogaLayout | pixi-flex-layout</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">pixi-flex-layout</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="yogalayout.html">YogaLayout</a>
+				</li>
+			</ul>
+			<h1>Class YogaLayout</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">YogaLayout</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section tsd-is-external">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-external">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external"><a href="yogalayout.html#_aspectratio" class="tsd-kind-icon">_aspect<wbr>Ratio</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external"><a href="yogalayout.html#_cachedlayout" class="tsd-kind-icon">_cached<wbr>Layout</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external"><a href="yogalayout.html#_height" class="tsd-kind-icon">_height</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external"><a href="yogalayout.html#_lastrecalculationduration" class="tsd-kind-icon">_last<wbr>Recalculation<wbr>Duration</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external"><a href="yogalayout.html#_needupdateasroot" class="tsd-kind-icon">_need<wbr>Update<wbr>AsRoot</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external"><a href="yogalayout.html#_width" class="tsd-kind-icon">_width</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#children" class="tsd-kind-icon">children</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#node" class="tsd-kind-icon">node</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#parent" class="tsd-kind-icon">parent</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#rescaletoyoga" class="tsd-kind-icon">rescale<wbr>ToYoga</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#target" class="tsd-kind-icon">target</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static tsd-is-external"><a href="yogalayout.html#layout_updated_event" class="tsd-kind-icon">LAYOUT_<wbr>UPDATED_<wbr>EVENT</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static tsd-is-external"><a href="yogalayout.html#need_layout_update" class="tsd-kind-icon">NEED_<wbr>LAYOUT_<wbr>UPDATE</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static tsd-is-external"><a href="yogalayout.html#roots" class="tsd-kind-icon">roots</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-external">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#aligncontent" class="tsd-kind-icon">align<wbr>Content</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#alignitems" class="tsd-kind-icon">align<wbr>Items</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#alignself" class="tsd-kind-icon">align<wbr>Self</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#aspectratio" class="tsd-kind-icon">aspect<wbr>Ratio</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#border" class="tsd-kind-icon">border</a></li>
+								<li class="tsd-kind-set-signature tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#borderall" class="tsd-kind-icon">border<wbr>All</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#borderbottom" class="tsd-kind-icon">border<wbr>Bottom</a></li>
+								<li class="tsd-kind-set-signature tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#borderleft" class="tsd-kind-icon">border<wbr>Left</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#borderright" class="tsd-kind-icon">border<wbr>Right</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#bordertop" class="tsd-kind-icon">border<wbr>Top</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#bordereft" class="tsd-kind-icon">bordereft</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#bottom" class="tsd-kind-icon">bottom</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#calculatedheight" class="tsd-kind-icon">calculated<wbr>Height</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#calculatedwidth" class="tsd-kind-icon">calculated<wbr>Width</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#computedlayout" class="tsd-kind-icon">computed<wbr>Layout</a></li>
+								<li class="tsd-kind-set-signature tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#config" class="tsd-kind-icon">config</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#display" class="tsd-kind-icon">display</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#flexbasis" class="tsd-kind-icon">flex<wbr>Basis</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#flexdirection" class="tsd-kind-icon">flex<wbr>Direction</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#flexgrow" class="tsd-kind-icon">flex<wbr>Grow</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#flexshrink" class="tsd-kind-icon">flex<wbr>Shrink</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#flexwrap" class="tsd-kind-icon">flex<wbr>Wrap</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#hascontantdeclaredsize" class="tsd-kind-icon">has<wbr>Contant<wbr>Declared<wbr>Size</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#height" class="tsd-kind-icon">height</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#isheightcalculatedfrompixi" class="tsd-kind-icon">is<wbr>Height<wbr>Calculated<wbr>From<wbr>Pixi</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#isroot" class="tsd-kind-icon">is<wbr>Root</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#iswidthcalculatedfrompixi" class="tsd-kind-icon">is<wbr>Width<wbr>Calculated<wbr>From<wbr>Pixi</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#justifycontent" class="tsd-kind-icon">justify<wbr>Content</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#left" class="tsd-kind-icon">left</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#margin" class="tsd-kind-icon">margin</a></li>
+								<li class="tsd-kind-set-signature tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#marginall" class="tsd-kind-icon">margin<wbr>All</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#marginbottom" class="tsd-kind-icon">margin<wbr>Bottom</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#marginleft" class="tsd-kind-icon">margin<wbr>Left</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#marginright" class="tsd-kind-icon">margin<wbr>Right</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#margintop" class="tsd-kind-icon">margin<wbr>Top</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#maxheight" class="tsd-kind-icon">max<wbr>Height</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#maxwidth" class="tsd-kind-icon">max<wbr>Width</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#minheight" class="tsd-kind-icon">min<wbr>Height</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#minwidth" class="tsd-kind-icon">min<wbr>Width</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#padding" class="tsd-kind-icon">padding</a></li>
+								<li class="tsd-kind-set-signature tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#paddingall" class="tsd-kind-icon">padding<wbr>All</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#paddingbottom" class="tsd-kind-icon">padding<wbr>Bottom</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#paddingleft" class="tsd-kind-icon">padding<wbr>Left</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#paddingright" class="tsd-kind-icon">padding<wbr>Right</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#paddingtop" class="tsd-kind-icon">padding<wbr>Top</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#position" class="tsd-kind-icon">position</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#right" class="tsd-kind-icon">right</a></li>
+								<li class="tsd-kind-set-signature tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#root" class="tsd-kind-icon">root</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#top" class="tsd-kind-icon">top</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#width" class="tsd-kind-icon">width</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-external">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external"><a href="yogalayout.html#_parsevalue" class="tsd-kind-icon">_parse<wbr>Value</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#addchild" class="tsd-kind-icon">add<wbr>Child</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#copy" class="tsd-kind-icon">copy</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#filldefaults" class="tsd-kind-icon">fill<wbr>Defaults</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#fromconfig" class="tsd-kind-icon">from<wbr>Config</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#recalculatelayout" class="tsd-kind-icon">recalculate<wbr>Layout</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#removechild" class="tsd-kind-icon">remove<wbr>Child</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#requestlayoutupdate" class="tsd-kind-icon">request<wbr>Layout<wbr>Update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="yogalayout.html#update" class="tsd-kind-icon">update</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Yoga<wbr>Layout<span class="tsd-signature-symbol">(</span>pixiObject<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_pixi_js_.displayobject.html" class="tsd-signature-type">DisplayObject</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="yogalayout.html" class="tsd-signature-type">YogaLayout</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L48">YogaLayout.ts:48</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> pixiObject: <a href="../interfaces/_pixi_js_.displayobject.html" class="tsd-signature-type">DisplayObject</a><span class="tsd-signature-symbol"> = new DisplayObject()</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="yogalayout.html" class="tsd-signature-type">YogaLayout</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
+					<a name="_aspectratio" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _aspect<wbr>Ratio</h3>
+					<div class="tsd-signature tsd-kind-icon">_aspect<wbr>Ratio<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L48">YogaLayout.ts:48</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Used instead of Yoga.AspectRatio because of Yoga issue <a href="https://github.com/facebook/yoga/issues/677">https://github.com/facebook/yoga/issues/677</a></p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
+					<a name="_cachedlayout" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _cached<wbr>Layout</h3>
+					<div class="tsd-signature tsd-kind-icon">_cached<wbr>Layout<span class="tsd-signature-symbol">:</span> <a href="../interfaces/yogaconstants.computedlayout.html" class="tsd-signature-type">ComputedLayout</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L37">YogaLayout.ts:37</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
+					<a name="_height" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _height</h3>
+					<div class="tsd-signature tsd-kind-icon">_height<span class="tsd-signature-symbol">:</span> <a href="../globals.html#yogasize" class="tsd-signature-type">YogaSize</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L36">YogaLayout.ts:36</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
+					<a name="_lastrecalculationduration" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _last<wbr>Recalculation<wbr>Duration</h3>
+					<div class="tsd-signature tsd-kind-icon">_last<wbr>Recalculation<wbr>Duration<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L38">YogaLayout.ts:38</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
+					<a name="_needupdateasroot" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _need<wbr>Update<wbr>AsRoot</h3>
+					<div class="tsd-signature tsd-kind-icon">_need<wbr>Update<wbr>AsRoot<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L43">YogaLayout.ts:43</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Will be recalculated in next frame</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
+					<a name="_width" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _width</h3>
+					<div class="tsd-signature tsd-kind-icon">_width<span class="tsd-signature-symbol">:</span> <a href="../globals.html#yogasize" class="tsd-signature-type">YogaSize</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L35">YogaLayout.ts:35</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
+					<a name="children" class="tsd-anchor"></a>
+					<h3>children</h3>
+					<div class="tsd-signature tsd-kind-icon">children<span class="tsd-signature-symbol">:</span> <a href="yogalayout.html" class="tsd-signature-type">YogaLayout</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L27">YogaLayout.ts:27</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
+					<a name="node" class="tsd-anchor"></a>
+					<h3>node</h3>
+					<div class="tsd-signature tsd-kind-icon">node<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Yoga.YogaNode</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L26">YogaLayout.ts:26</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
+					<a name="parent" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> parent</h3>
+					<div class="tsd-signature tsd-kind-icon">parent<span class="tsd-signature-symbol">:</span> <a href="yogalayout.html" class="tsd-signature-type">YogaLayout</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L28">YogaLayout.ts:28</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
+					<a name="rescaletoyoga" class="tsd-anchor"></a>
+					<h3>rescale<wbr>ToYoga</h3>
+					<div class="tsd-signature tsd-kind-icon">rescale<wbr>ToYoga<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L33">YogaLayout.ts:33</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>True if Yoga should manage PIXI objects width/height</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
+					<a name="target" class="tsd-anchor"></a>
+					<h3>target</h3>
+					<div class="tsd-signature tsd-kind-icon">target<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_pixi_js_.displayobject.html" class="tsd-signature-type">DisplayObject</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L25">YogaLayout.ts:25</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static tsd-is-external">
+					<a name="layout_updated_event" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> LAYOUT_<wbr>UPDATED_<wbr>EVENT</h3>
+					<div class="tsd-signature tsd-kind-icon">LAYOUT_<wbr>UPDATED_<wbr>EVENT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"LAYOUT_UPDATED_EVENT"</span><span class="tsd-signature-symbol"> = &quot;LAYOUT_UPDATED_EVENT&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L23">YogaLayout.ts:23</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static tsd-is-external">
+					<a name="need_layout_update" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> NEED_<wbr>LAYOUT_<wbr>UPDATE</h3>
+					<div class="tsd-signature tsd-kind-icon">NEED_<wbr>LAYOUT_<wbr>UPDATE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"NEED_LAYOUT_UPDATE"</span><span class="tsd-signature-symbol"> = &quot;NEED_LAYOUT_UPDATE&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L24">YogaLayout.ts:24</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static tsd-is-external">
+					<a name="roots" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> roots</h3>
+					<div class="tsd-signature tsd-kind-icon">roots<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><a href="yogalayout.html" class="tsd-signature-type">YogaLayout</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new Map()</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L22">YogaLayout.ts:22</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Experimental feature for building layouts independent of pixi tree</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="aligncontent" class="tsd-anchor"></a>
+					<h3>align<wbr>Content</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> alignContent<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#align" class="tsd-signature-type">Align</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> alignContent<span class="tsd-signature-symbol">(</span>align<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#align" class="tsd-signature-type">Align</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L292">YogaLayout.ts:292</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#align" class="tsd-signature-type">Align</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L287">YogaLayout.ts:287</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>align: <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#align" class="tsd-signature-type">Align</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="alignitems" class="tsd-anchor"></a>
+					<h3>align<wbr>Items</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> alignItems<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#align" class="tsd-signature-type">Align</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> alignItems<span class="tsd-signature-symbol">(</span>align<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#align" class="tsd-signature-type">Align</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L301">YogaLayout.ts:301</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#align" class="tsd-signature-type">Align</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L296">YogaLayout.ts:296</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>align: <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#align" class="tsd-signature-type">Align</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="alignself" class="tsd-anchor"></a>
+					<h3>align<wbr>Self</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> alignSelf<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#align" class="tsd-signature-type">Align</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> alignSelf<span class="tsd-signature-symbol">(</span>align<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#align" class="tsd-signature-type">Align</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L311">YogaLayout.ts:311</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#align" class="tsd-signature-type">Align</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L306">YogaLayout.ts:306</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>align: <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#align" class="tsd-signature-type">Align</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="aspectratio" class="tsd-anchor"></a>
+					<h3>aspect<wbr>Ratio</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> aspectRatio<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> aspectRatio<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L203">YogaLayout.ts:203</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L195">YogaLayout.ts:195</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="border" class="tsd-anchor"></a>
+					<h3>border</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> border<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> border<span class="tsd-signature-symbol">(</span>margin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L476">YogaLayout.ts:476</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L468">YogaLayout.ts:468</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>margin: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-set-signature tsd-parent-kind-class tsd-is-external">
+					<a name="borderall" class="tsd-anchor"></a>
+					<h3>border<wbr>All</h3>
+					<ul class="tsd-signatures tsd-kind-set-signature tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> borderAll<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L480">YogaLayout.ts:480</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="borderbottom" class="tsd-anchor"></a>
+					<h3>border<wbr>Bottom</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> borderBottom<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> borderBottom<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L498">YogaLayout.ts:498</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L493">YogaLayout.ts:493</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-set-signature tsd-parent-kind-class tsd-is-external">
+					<a name="borderleft" class="tsd-anchor"></a>
+					<h3>border<wbr>Left</h3>
+					<ul class="tsd-signatures tsd-kind-set-signature tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> borderLeft<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L502">YogaLayout.ts:502</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="borderright" class="tsd-anchor"></a>
+					<h3>border<wbr>Right</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> borderRight<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> borderRight<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L516">YogaLayout.ts:516</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L511">YogaLayout.ts:511</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="bordertop" class="tsd-anchor"></a>
+					<h3>border<wbr>Top</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> borderTop<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> borderTop<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L489">YogaLayout.ts:489</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L484">YogaLayout.ts:484</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+					<a name="bordereft" class="tsd-anchor"></a>
+					<h3>bordereft</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> bordereft<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L507">YogaLayout.ts:507</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="bottom" class="tsd-anchor"></a>
+					<h3>bottom</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> bottom<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> bottom<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L534">YogaLayout.ts:534</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L529">YogaLayout.ts:529</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+					<a name="calculatedheight" class="tsd-anchor"></a>
+					<h3>calculated<wbr>Height</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> calculatedHeight<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L225">YogaLayout.ts:225</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns computed height in pixels</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+					<a name="calculatedwidth" class="tsd-anchor"></a>
+					<h3>calculated<wbr>Width</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> calculatedWidth<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L218">YogaLayout.ts:218</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns computed width in pixels</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+					<a name="computedlayout" class="tsd-anchor"></a>
+					<h3>computed<wbr>Layout</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> computedLayout<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/yogaconstants.computedlayout.html" class="tsd-signature-type">ComputedLayout</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L171">YogaLayout.ts:171</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/yogaconstants.computedlayout.html" class="tsd-signature-type">ComputedLayout</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-set-signature tsd-parent-kind-class tsd-is-external">
+					<a name="config" class="tsd-anchor"></a>
+					<h3>config</h3>
+					<ul class="tsd-signatures tsd-kind-set-signature tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> config<span class="tsd-signature-symbol">(</span>config<span class="tsd-signature-symbol">: </span><a href="../globals.html#yogalayoutconfig" class="tsd-signature-type">YogaLayoutConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L97">YogaLayout.ts:97</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Same as &#39;fromConfig()&#39;</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>config: <a href="../globals.html#yogalayoutconfig" class="tsd-signature-type">YogaLayoutConfig</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="display" class="tsd-anchor"></a>
+					<h3>display</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> display<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#display" class="tsd-signature-type">Display</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> display<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#display" class="tsd-signature-type">Display</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L597">YogaLayout.ts:597</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#display" class="tsd-signature-type">Display</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L592">YogaLayout.ts:592</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#display" class="tsd-signature-type">Display</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="flexbasis" class="tsd-anchor"></a>
+					<h3>flex<wbr>Basis</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> flexBasis<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> flexBasis<span class="tsd-signature-symbol">(</span>basis<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L349">YogaLayout.ts:349</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L344">YogaLayout.ts:344</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>basis: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="flexdirection" class="tsd-anchor"></a>
+					<h3>flex<wbr>Direction</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> flexDirection<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#flexdirection" class="tsd-signature-type">FlexDirection</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> flexDirection<span class="tsd-signature-symbol">(</span>direction<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#flexdirection" class="tsd-signature-type">FlexDirection</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L274">YogaLayout.ts:274</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#flexdirection" class="tsd-signature-type">FlexDirection</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L269">YogaLayout.ts:269</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>direction: <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#flexdirection" class="tsd-signature-type">FlexDirection</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="flexgrow" class="tsd-anchor"></a>
+					<h3>flex<wbr>Grow</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> flexGrow<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> flexGrow<span class="tsd-signature-symbol">(</span>grow<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L331">YogaLayout.ts:331</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L326">YogaLayout.ts:326</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>grow: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="flexshrink" class="tsd-anchor"></a>
+					<h3>flex<wbr>Shrink</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> flexShrink<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> flexShrink<span class="tsd-signature-symbol">(</span>shrink<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L340">YogaLayout.ts:340</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L335">YogaLayout.ts:335</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>shrink: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="flexwrap" class="tsd-anchor"></a>
+					<h3>flex<wbr>Wrap</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> flexWrap<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#flexwrap" class="tsd-signature-type">FlexWrap</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> flexWrap<span class="tsd-signature-symbol">(</span>wrap<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#flexwrap" class="tsd-signature-type">FlexWrap</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L321">YogaLayout.ts:321</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#flexwrap" class="tsd-signature-type">FlexWrap</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L316">YogaLayout.ts:316</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>wrap: <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#flexwrap" class="tsd-signature-type">FlexWrap</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+					<a name="hascontantdeclaredsize" class="tsd-anchor"></a>
+					<h3>has<wbr>Contant<wbr>Declared<wbr>Size</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> hasContantDeclaredSize<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L166">YogaLayout.ts:166</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns true if object size is independent of its children sizes.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="height" class="tsd-anchor"></a>
+					<h3>height</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> height<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../globals.html#yogasize" class="tsd-signature-type">YogaSize</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> height<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><a href="../globals.html#yogasize" class="tsd-signature-type">YogaSize</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L265">YogaLayout.ts:265</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Can handle:</p>
+									<ul>
+										<li>pixels (eg 150)</li>
+										<li>percents (&quot;50%&quot;)</li>
+										<li>&quot;auto&quot; to use values from yoga</li>
+										<li>&quot;pixi&quot; to use DisplayObject.width/height</li>
+									</ul>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../globals.html#yogasize" class="tsd-signature-type">YogaSize</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L257">YogaLayout.ts:257</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Can handle:</p>
+									<ul>
+										<li>pixels (eg 150)</li>
+										<li>percents (&quot;50%&quot;)</li>
+										<li>&quot;auto&quot; to use values from yoga</li>
+										<li>&quot;pixi&quot; to use DisplayObject.width/height</li>
+									</ul>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <a href="../globals.html#yogasize" class="tsd-signature-type">YogaSize</a></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+					<a name="isheightcalculatedfrompixi" class="tsd-anchor"></a>
+					<h3>is<wbr>Height<wbr>Calculated<wbr>From<wbr>Pixi</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> isHeightCalculatedFromPixi<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L211">YogaLayout.ts:211</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+					<a name="isroot" class="tsd-anchor"></a>
+					<h3>is<wbr>Root</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> isRoot<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L159">YogaLayout.ts:159</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+					<a name="iswidthcalculatedfrompixi" class="tsd-anchor"></a>
+					<h3>is<wbr>Width<wbr>Calculated<wbr>From<wbr>Pixi</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> isWidthCalculatedFromPixi<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L207">YogaLayout.ts:207</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="justifycontent" class="tsd-anchor"></a>
+					<h3>justify<wbr>Content</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> justifyContent<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#justifycontent" class="tsd-signature-type">JustifyContent</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> justifyContent<span class="tsd-signature-symbol">(</span>just<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#justifycontent" class="tsd-signature-type">JustifyContent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L283">YogaLayout.ts:283</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#justifycontent" class="tsd-signature-type">JustifyContent</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L278">YogaLayout.ts:278</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>just: <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#justifycontent" class="tsd-signature-type">JustifyContent</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="left" class="tsd-anchor"></a>
+					<h3>left</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> left<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> left<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L543">YogaLayout.ts:543</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L538">YogaLayout.ts:538</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="margin" class="tsd-anchor"></a>
+					<h3>margin</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> margin<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> margin<span class="tsd-signature-symbol">(</span>margin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L427">YogaLayout.ts:427</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L415">YogaLayout.ts:415</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>margin: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-set-signature tsd-parent-kind-class tsd-is-external">
+					<a name="marginall" class="tsd-anchor"></a>
+					<h3>margin<wbr>All</h3>
+					<ul class="tsd-signatures tsd-kind-set-signature tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> marginAll<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L423">YogaLayout.ts:423</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="marginbottom" class="tsd-anchor"></a>
+					<h3>margin<wbr>Bottom</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> marginBottom<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> marginBottom<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L446">YogaLayout.ts:446</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L441">YogaLayout.ts:441</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="marginleft" class="tsd-anchor"></a>
+					<h3>margin<wbr>Left</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> marginLeft<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> marginLeft<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L455">YogaLayout.ts:455</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L450">YogaLayout.ts:450</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="marginright" class="tsd-anchor"></a>
+					<h3>margin<wbr>Right</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> marginRight<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> marginRight<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L464">YogaLayout.ts:464</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L459">YogaLayout.ts:459</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="margintop" class="tsd-anchor"></a>
+					<h3>margin<wbr>Top</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> marginTop<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> marginTop<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L437">YogaLayout.ts:437</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L432">YogaLayout.ts:432</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="maxheight" class="tsd-anchor"></a>
+					<h3>max<wbr>Height</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> maxHeight<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> maxHeight<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L588">YogaLayout.ts:588</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L583">YogaLayout.ts:583</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="maxwidth" class="tsd-anchor"></a>
+					<h3>max<wbr>Width</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> maxWidth<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> maxWidth<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L579">YogaLayout.ts:579</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L574">YogaLayout.ts:574</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="minheight" class="tsd-anchor"></a>
+					<h3>min<wbr>Height</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> minHeight<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> minHeight<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L570">YogaLayout.ts:570</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L565">YogaLayout.ts:565</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="minwidth" class="tsd-anchor"></a>
+					<h3>min<wbr>Width</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> minWidth<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> minWidth<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L561">YogaLayout.ts:561</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L556">YogaLayout.ts:556</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="padding" class="tsd-anchor"></a>
+					<h3>padding</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> padding<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> padding<span class="tsd-signature-symbol">(</span>margin<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L371">YogaLayout.ts:371</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L363">YogaLayout.ts:363</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>margin: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-set-signature tsd-parent-kind-class tsd-is-external">
+					<a name="paddingall" class="tsd-anchor"></a>
+					<h3>padding<wbr>All</h3>
+					<ul class="tsd-signatures tsd-kind-set-signature tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> paddingAll<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L375">YogaLayout.ts:375</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="paddingbottom" class="tsd-anchor"></a>
+					<h3>padding<wbr>Bottom</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> paddingBottom<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> paddingBottom<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L393">YogaLayout.ts:393</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L388">YogaLayout.ts:388</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="paddingleft" class="tsd-anchor"></a>
+					<h3>padding<wbr>Left</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> paddingLeft<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> paddingLeft<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L402">YogaLayout.ts:402</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L397">YogaLayout.ts:397</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="paddingright" class="tsd-anchor"></a>
+					<h3>padding<wbr>Right</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> paddingRight<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> paddingRight<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L411">YogaLayout.ts:411</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L406">YogaLayout.ts:406</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="paddingtop" class="tsd-anchor"></a>
+					<h3>padding<wbr>Top</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> paddingTop<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> paddingTop<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L384">YogaLayout.ts:384</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L379">YogaLayout.ts:379</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="position" class="tsd-anchor"></a>
+					<h3>position</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> position<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#positiontype" class="tsd-signature-type">PositionType</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> position<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#positiontype" class="tsd-signature-type">PositionType</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L358">YogaLayout.ts:358</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#positiontype" class="tsd-signature-type">PositionType</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L353">YogaLayout.ts:353</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <span class="tsd-signature-symbol">keyof </span><span class="tsd-signature-symbol">typeof </span><a href="../globals.html#positiontype" class="tsd-signature-type">PositionType</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="right" class="tsd-anchor"></a>
+					<h3>right</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> right<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> right<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L552">YogaLayout.ts:552</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L547">YogaLayout.ts:547</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-set-signature tsd-parent-kind-class tsd-is-external">
+					<a name="root" class="tsd-anchor"></a>
+					<h3>root</h3>
+					<ul class="tsd-signatures tsd-kind-set-signature tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> root<span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L78">YogaLayout.ts:78</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>val: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="top" class="tsd-anchor"></a>
+					<h3>top</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> top<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> top<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L525">YogaLayout.ts:525</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L520">YogaLayout.ts:520</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+					<a name="width" class="tsd-anchor"></a>
+					<h3>width</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> width<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../globals.html#yogasize" class="tsd-signature-type">YogaSize</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> width<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><a href="../globals.html#yogasize" class="tsd-signature-type">YogaSize</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L245">YogaLayout.ts:245</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Can handle:</p>
+									<ul>
+										<li>pixels (eg 150)</li>
+										<li>percents (&quot;50%&quot;)</li>
+										<li>&quot;auto&quot; to use values from yoga</li>
+										<li>&quot;pixi&quot; to use DisplayObject.width/height</li>
+									</ul>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="../globals.html#yogasize" class="tsd-signature-type">YogaSize</a></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L237">YogaLayout.ts:237</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Can handle:</p>
+									<ul>
+										<li>pixels (eg 150)</li>
+										<li>percents (&quot;50%&quot;)</li>
+										<li>&quot;auto&quot; to use values from yoga</li>
+										<li>&quot;pixi&quot; to use DisplayObject.width/height</li>
+									</ul>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <a href="../globals.html#yogasize" class="tsd-signature-type">YogaSize</a></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-external">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
+					<a name="_parsevalue" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _parse<wbr>Value</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">_parse<wbr>Value<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>unit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L602">YogaLayout.ts:602</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>value: <span class="tsd-signature-symbol">{ </span>unit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>unit<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></h5>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../globals.html#pixelsorpercentage" class="tsd-signature-type">PixelsOrPercentage</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="addchild" class="tsd-anchor"></a>
+					<h3>add<wbr>Child</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Child<span class="tsd-signature-symbol">(</span>yoga<span class="tsd-signature-symbol">: </span><a href="yogalayout.html" class="tsd-signature-type">YogaLayout</a>, index<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L121">YogaLayout.ts:121</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>yoga: <a href="yogalayout.html" class="tsd-signature-type">YogaLayout</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> index: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = this.node.getChildCount()</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="copy" class="tsd-anchor"></a>
+					<h3>copy</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">copy<span class="tsd-signature-symbol">(</span>layout<span class="tsd-signature-symbol">: </span><a href="yogalayout.html" class="tsd-signature-type">YogaLayout</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L105">YogaLayout.ts:105</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Copies all properties (styles, size, rescaleToYoga etc) from other YogaLayout objects</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>layout: <a href="yogalayout.html" class="tsd-signature-type">YogaLayout</a></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="filldefaults" class="tsd-anchor"></a>
+					<h3>fill<wbr>Defaults</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">fill<wbr>Defaults<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L113">YogaLayout.ts:113</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="fromconfig" class="tsd-anchor"></a>
+					<h3>from<wbr>Config</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">from<wbr>Config<span class="tsd-signature-symbol">(</span>config<span class="tsd-signature-symbol">: </span><a href="../globals.html#yogalayoutconfig" class="tsd-signature-type">YogaLayoutConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L89">YogaLayout.ts:89</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Assigns given properties to this yoga layout</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>config: <a href="../globals.html#yogalayoutconfig" class="tsd-signature-type">YogaLayoutConfig</a></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="recalculatelayout" class="tsd-anchor"></a>
+					<h3>recalculate<wbr>Layout</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">recalculate<wbr>Layout<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L144">YogaLayout.ts:144</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="removechild" class="tsd-anchor"></a>
+					<h3>remove<wbr>Child</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Child<span class="tsd-signature-symbol">(</span>yoga<span class="tsd-signature-symbol">: </span><a href="yogalayout.html" class="tsd-signature-type">YogaLayout</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L131">YogaLayout.ts:131</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>yoga: <a href="yogalayout.html" class="tsd-signature-type">YogaLayout</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="requestlayoutupdate" class="tsd-anchor"></a>
+					<h3>request<wbr>Layout<wbr>Update</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">request<wbr>Layout<wbr>Update<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L140">YogaLayout.ts:140</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Mark object as dirty and request layout recalculation</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a name="update" class="tsd-anchor"></a>
+					<h3>update</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/fireveined/pixi-flex-layout/blob/7954023/src/YogaLayout.ts#L152">YogaLayout.ts:152</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-is-external">
+						<a href="yogalayout.html" class="tsd-kind-icon">Yoga<wbr>Layout</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
+								<a href="yogalayout.html#_aspectratio" class="tsd-kind-icon">_aspect<wbr>Ratio</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
+								<a href="yogalayout.html#_cachedlayout" class="tsd-kind-icon">_cached<wbr>Layout</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
+								<a href="yogalayout.html#_height" class="tsd-kind-icon">_height</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
+								<a href="yogalayout.html#_lastrecalculationduration" class="tsd-kind-icon">_last<wbr>Recalculation<wbr>Duration</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
+								<a href="yogalayout.html#_needupdateasroot" class="tsd-kind-icon">_need<wbr>Update<wbr>AsRoot</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-external">
+								<a href="yogalayout.html#_width" class="tsd-kind-icon">_width</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#children" class="tsd-kind-icon">children</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#node" class="tsd-kind-icon">node</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#parent" class="tsd-kind-icon">parent</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#rescaletoyoga" class="tsd-kind-icon">rescale<wbr>ToYoga</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#target" class="tsd-kind-icon">target</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static tsd-is-external">
+								<a href="yogalayout.html#layout_updated_event" class="tsd-kind-icon">LAYOUT_<wbr>UPDATED_<wbr>EVENT</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static tsd-is-external">
+								<a href="yogalayout.html#need_layout_update" class="tsd-kind-icon">NEED_<wbr>LAYOUT_<wbr>UPDATE</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static tsd-is-external">
+								<a href="yogalayout.html#roots" class="tsd-kind-icon">roots</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#aligncontent" class="tsd-kind-icon">align<wbr>Content</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#alignitems" class="tsd-kind-icon">align<wbr>Items</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#alignself" class="tsd-kind-icon">align<wbr>Self</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#aspectratio" class="tsd-kind-icon">aspect<wbr>Ratio</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#border" class="tsd-kind-icon">border</a>
+							</li>
+							<li class=" tsd-kind-set-signature tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#borderall" class="tsd-kind-icon">border<wbr>All</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#borderbottom" class="tsd-kind-icon">border<wbr>Bottom</a>
+							</li>
+							<li class=" tsd-kind-set-signature tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#borderleft" class="tsd-kind-icon">border<wbr>Left</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#borderright" class="tsd-kind-icon">border<wbr>Right</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#bordertop" class="tsd-kind-icon">border<wbr>Top</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#bordereft" class="tsd-kind-icon">bordereft</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#bottom" class="tsd-kind-icon">bottom</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#calculatedheight" class="tsd-kind-icon">calculated<wbr>Height</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#calculatedwidth" class="tsd-kind-icon">calculated<wbr>Width</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#computedlayout" class="tsd-kind-icon">computed<wbr>Layout</a>
+							</li>
+							<li class=" tsd-kind-set-signature tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#config" class="tsd-kind-icon">config</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#display" class="tsd-kind-icon">display</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#flexbasis" class="tsd-kind-icon">flex<wbr>Basis</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#flexdirection" class="tsd-kind-icon">flex<wbr>Direction</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#flexgrow" class="tsd-kind-icon">flex<wbr>Grow</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#flexshrink" class="tsd-kind-icon">flex<wbr>Shrink</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#flexwrap" class="tsd-kind-icon">flex<wbr>Wrap</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#hascontantdeclaredsize" class="tsd-kind-icon">has<wbr>Contant<wbr>Declared<wbr>Size</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#height" class="tsd-kind-icon">height</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#isheightcalculatedfrompixi" class="tsd-kind-icon">is<wbr>Height<wbr>Calculated<wbr>From<wbr>Pixi</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#isroot" class="tsd-kind-icon">is<wbr>Root</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#iswidthcalculatedfrompixi" class="tsd-kind-icon">is<wbr>Width<wbr>Calculated<wbr>From<wbr>Pixi</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#justifycontent" class="tsd-kind-icon">justify<wbr>Content</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#left" class="tsd-kind-icon">left</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#margin" class="tsd-kind-icon">margin</a>
+							</li>
+							<li class=" tsd-kind-set-signature tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#marginall" class="tsd-kind-icon">margin<wbr>All</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#marginbottom" class="tsd-kind-icon">margin<wbr>Bottom</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#marginleft" class="tsd-kind-icon">margin<wbr>Left</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#marginright" class="tsd-kind-icon">margin<wbr>Right</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#margintop" class="tsd-kind-icon">margin<wbr>Top</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#maxheight" class="tsd-kind-icon">max<wbr>Height</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#maxwidth" class="tsd-kind-icon">max<wbr>Width</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#minheight" class="tsd-kind-icon">min<wbr>Height</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#minwidth" class="tsd-kind-icon">min<wbr>Width</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#padding" class="tsd-kind-icon">padding</a>
+							</li>
+							<li class=" tsd-kind-set-signature tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#paddingall" class="tsd-kind-icon">padding<wbr>All</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#paddingbottom" class="tsd-kind-icon">padding<wbr>Bottom</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#paddingleft" class="tsd-kind-icon">padding<wbr>Left</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#paddingright" class="tsd-kind-icon">padding<wbr>Right</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#paddingtop" class="tsd-kind-icon">padding<wbr>Top</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#position" class="tsd-kind-icon">position</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#right" class="tsd-kind-icon">right</a>
+							</li>
+							<li class=" tsd-kind-set-signature tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#root" class="tsd-kind-icon">root</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#top" class="tsd-kind-icon">top</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#width" class="tsd-kind-icon">width</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private tsd-is-external">
+								<a href="yogalayout.html#_parsevalue" class="tsd-kind-icon">_parse<wbr>Value</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#addchild" class="tsd-kind-icon">add<wbr>Child</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#copy" class="tsd-kind-icon">copy</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#filldefaults" class="tsd-kind-icon">fill<wbr>Defaults</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#fromconfig" class="tsd-kind-icon">from<wbr>Config</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#recalculatelayout" class="tsd-kind-icon">recalculate<wbr>Layout</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#removechild" class="tsd-kind-icon">remove<wbr>Child</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#requestlayoutupdate" class="tsd-kind-icon">request<wbr>Layout<wbr>Update</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+								<a href="yogalayout.html#update" class="tsd-kind-icon">update</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+					<li class=" tsd-kind-type-alias tsd-is-external">
+						<a href="../globals.html#pixelsorpercentage" class="tsd-kind-icon">Pixels<wbr>OrPercentage</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-is-external">
+						<a href="../globals.html#yogalayoutconfig" class="tsd-kind-icon">Yoga<wbr>Layout<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-is-external">
+						<a href="../globals.html#yogasize" class="tsd-kind-icon">Yoga<wbr>Size</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="../globals.html#align" class="tsd-kind-icon">Align</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="../globals.html#computedlayout" class="tsd-kind-icon">Computed<wbr>Layout</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="../globals.html#container" class="tsd-kind-icon">Container</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="../globals.html#display" class="tsd-kind-icon">Display</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="../globals.html#displayobject" class="tsd-kind-icon">Display<wbr>Object</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="../globals.html#flexdirection" class="tsd-kind-icon">Flex<wbr>Direction</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="../globals.html#flexwrap" class="tsd-kind-icon">Flex<wbr>Wrap</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="../globals.html#justifycontent" class="tsd-kind-icon">Justify<wbr>Content</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="../globals.html#ninesliceplane" class="tsd-kind-icon">Nine<wbr>Slice<wbr>Plane</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="../globals.html#positiontype" class="tsd-kind-icon">Position<wbr>Type</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="../globals.html#transformstatic" class="tsd-kind-icon">Transform<wbr>Static</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-external">
+						<a href="../globals.html#yogaedges" class="tsd-kind-icon">Yoga<wbr>Edges</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
+						<a href="../globals.html#applycontainerpolyfill" class="tsd-kind-icon">apply<wbr>Container<wbr>Polyfill</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
+						<a href="../globals.html#applydisplayobjectpolyfill" class="tsd-kind-icon">apply<wbr>Display<wbr>Object<wbr>Polyfill</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="../globals.html#initializeyogalayout" class="tsd-kind-icon">initialize<wbr>Yoga<wbr>Layout</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>
