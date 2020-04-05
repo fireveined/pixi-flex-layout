@@ -34,6 +34,8 @@ for(let i =0; i < 10;i++){
 ```
 Live and editable examble can be found on https://fireveined.github.io/pixi-flex-layout/test.html
 
+TypeDoc on https://fireveined.github.io/pixi-flex-layout/doc/index.html
+
 #### Initializing flex
 _PIXI.Container.flex: boolean_
 > True to enable flex layout for direct children of container
