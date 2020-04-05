@@ -25,6 +25,10 @@ const container = new PIXI.Container();
 container.flex = true;
 container.yoga.fromConfig(containerStyle)
 container.yoga.flexDirection = "row";
+container.yoga.animationConfig = {
+    time: 200,
+    easing: t => t
+}
 
 for(let i =0; i < 10;i++){
   const foo = new PIXI.Text(i+"00");
@@ -32,11 +36,16 @@ for(let i =0; i < 10;i++){
 }
 
 ```
+
 Live and editable examble can be found on https://fireveined.github.io/pixi-flex-layout/test.html
 
 TypeDoc on https://fireveined.github.io/pixi-flex-layout/doc/index.html
 
 #### Initializing flex
+_initializeYogaLayout(options: IFlexLayoutOptions)_
+> Invoke once on app startup to initialize pixi.js polyfills. 
+Supported options: usePixiSharedTicker: boolean, default true
+
 _PIXI.Container.flex: boolean_
 > True to enable flex layout for direct children of container
 
@@ -79,6 +88,17 @@ obj.yoga.width = 100; // pixels
 obj.yoga.height = "30%" // 30% of parent
 obj.yoga.width = "auto"; // default 
 obj.yoga.height = "pixi"; // use value from PIXIobject.height property 
+```
+
+### Animations
+
+Animations can be enabled by setting animationConfig:
+
+```typescript
+obj.yoga.animationConfig = {
+    time: 200 // duration of animation in ms
+    easing: t => t 
+}
 ```
 ### Todos
 
