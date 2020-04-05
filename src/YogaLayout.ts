@@ -1,6 +1,7 @@
 import * as Yoga from "yoga-layout-prebuilt";
 import { YogaConstants } from "./YogaContants";
 import { YogaLayoutConfig } from "./YogaLayoutConfig";
+import { yogaAnimationManager } from "./YogaAnimationManager";
 import YogaEdges = YogaConstants.YogaEdges;
 import DisplayObject = PIXI.DisplayObject;
 import ComputedLayout = YogaConstants.ComputedLayout;
@@ -13,6 +14,25 @@ import PositionType = YogaConstants.PositionType;
 
 export type PixelsOrPercentage = number | string;
 export type YogaSize = PixelsOrPercentage | "pixi" | "auto";
+
+
+export interface IAnimationState {
+    fromX: number;
+    fromY: number;
+    curX: number;
+    curY: number;
+    toX: number;
+    toY: number;
+    time: number;
+    elapsed: number;
+    easing: (progress: number) => number;
+}
+
+export interface IYogaAnimationConfig {
+    time: number;
+    easing: (progress: number) => number;
+
+}
 
 export class YogaLayout {
 
@@ -28,6 +48,11 @@ export class YogaLayout {
     public parent?: YogaLayout;
 
     /**
+     * If set, position transitions will be animated
+     */
+    public animationConfig: IYogaAnimationConfig;
+
+    /**
      * True if Yoga should manage PIXI objects width/height
      */
     public rescaleToYoga: boolean = false;
@@ -35,7 +60,10 @@ export class YogaLayout {
     private _width: YogaSize;
     private _height: YogaSize;
     private _cachedLayout: ComputedLayout | undefined;
+    private _lastLayout: ComputedLayout | undefined;
     private _lastRecalculationDuration = 0;
+    private _animation: IAnimationState;
+
 
     /**
      * Will be recalculated in next frame
@@ -47,12 +75,13 @@ export class YogaLayout {
      */
     private _aspectRatio: number;
 
+    private _gap: number = 0;
+
     constructor(pixiObject: DisplayObject = new DisplayObject()) {
         this.node = Yoga.Node.create();
         pixiObject.__hasYoga = true;
         this.fillDefaults();
         this.target = pixiObject;
-
         if ((<any>this.target)._texture) {
             this.width = this.height = "pixi";
         } else {
@@ -61,18 +90,23 @@ export class YogaLayout {
 
         // broadcast event
         pixiObject.on(YogaLayout.LAYOUT_UPDATED_EVENT as any, () => {
+            this._lastLayout = this._cachedLayout;
             this._cachedLayout = undefined;
             this.children.forEach(child => child.target.emit(YogaLayout.LAYOUT_UPDATED_EVENT))
         })
 
         pixiObject.on(YogaLayout.NEED_LAYOUT_UPDATE as any, () => {
             // size change of this element wont change size/positions of its parent, so there is no need to update whole tree
-            if (!this.parent || (this.hasContantDeclaredSize && this.parent.width !== "auto" && this.parent.height !== "auto")) {
+            if (!this.parent /*|| (this.hasContantDeclaredSize && this.parent.width !== "auto" && this.parent.height !== "auto")*/) {
                 this._needUpdateAsRoot = true;
             } else {
                 this.parent.target.emit(YogaLayout.NEED_LAYOUT_UPDATE)
             }
         })
+    }
+
+    public get animationState(): Readonly<IAnimationState> {
+        return this._animation;
     }
 
     public set root(val: string) {
@@ -125,6 +159,7 @@ export class YogaLayout {
         this.node.insertChild(yoga.node, index)
         this.children.splice(index, 0, yoga);
         yoga.parent = this;
+        this.updateGap();
     }
 
 
@@ -168,6 +203,7 @@ export class YogaLayout {
             && !!this._height && this._height !== "pixi" && this._height !== "auto";
     }
 
+
     public get computedLayout(): ComputedLayout {
         if (!this._cachedLayout) {
             this._cachedLayout = this.node.getComputedLayout();
@@ -181,6 +217,11 @@ export class YogaLayout {
                 this._cachedLayout.height = Math.round(parseFloat(this._height as string) / 100 * this.parent.calculatedHeight)
             }
 
+            // if (this.position === "absolute" && this.parent && !this.bottom && !this.right) {
+            //     this._cachedLayout.left = this.node.getComputedMargin(Yoga.EDGE_LEFT);
+            //     this._cachedLayout.top = this.node.getComputedMargin(Yoga.EDGE_TOP)
+            // }
+
             // YOGA FIX for not working aspect ratio https://github.com/facebook/yoga/issues/677
             if (this._aspectRatio) {
                 const newHeight = this.calculatedWidth / this._aspectRatio;
@@ -188,7 +229,33 @@ export class YogaLayout {
                 this._cachedLayout.height = newHeight;
                 this.height = this.calculatedHeight;
             }
+
+            if (this.animationConfig) {
+                this._animation = {
+                    fromX: this._lastLayout?.left || this._cachedLayout.left,
+                    fromY: this._lastLayout?.top || this._cachedLayout.top,
+                    curX: this._lastLayout?.left || this._cachedLayout.left,
+                    curY: this._lastLayout?.top || this._cachedLayout.top,
+                    toX: this._cachedLayout.left,
+                    toY: this._cachedLayout.top,
+                    time: this.animationConfig.time,
+                    elapsed: 0,
+                    easing: this.animationConfig.easing
+                }
+
+                yogaAnimationManager.add(this._animation);
+            } else {
+                this._animation = <any>{
+                    curX: this._cachedLayout.left,
+                    curY: this._cachedLayout.top
+                }
+            }
+
         }
+
+        this._cachedLayout.left = this._animation.curX;
+        this._cachedLayout.top = this._animation.curY;
+
         return this._cachedLayout;
     }
 
@@ -268,6 +335,7 @@ export class YogaLayout {
 
     public set flexDirection(direction: keyof typeof FlexDirection) {
         this.node.setFlexDirection(<Yoga.YogaFlexDirection>YogaConstants.FlexDirection[direction]);
+        this.updateGap();
         this.requestLayoutUpdate();
     }
 
@@ -597,6 +665,36 @@ export class YogaLayout {
     public get display(): keyof typeof Display {
         // @ts-ignore
         return Display[this.node.getDisplay()];
+    }
+
+    public set gap(val: number) {
+        if (this._gap === val) {
+            return;
+        }
+        this._gap = val;
+        this.updateGap();
+        this.requestLayoutUpdate();
+    }
+
+    public get gap() {
+        return this._gap;
+    }
+
+    public updateGap(): void {
+        if (!this._gap) {
+            return;
+        }
+
+        let firstChildrenSkipped = false;
+        this.children.forEach((child, index) => {
+            if (firstChildrenSkipped) {
+                this.flexDirection === "column" ? child.marginTop = this._gap : child.marginLeft = this._gap;
+            }
+
+            if (child.position !== "absolute") {
+                firstChildrenSkipped = true;
+            }
+        })
     }
 
     private _parseValue(value: { unit: any, value: any }): PixelsOrPercentage {

@@ -14,14 +14,20 @@ const buttonStyle = {
 const buttonBackgroundStyle = {
     width: "100%",
     height: "100%",
+    left: 0,
+    top: 0,
     position: "absolute"
 }
 
 const button = new PIXI.Container();
 button.yoga.fromConfig(buttonStyle);
+button.yoga.animationConfig  = {
+    time: 250,
+    easing: t => t<.5 ? 4*t*t*t : (t-1)*(2*t-2)*(2*t-2)+1
+}
 
 const buttonText = new PIXI.Text();
-const background = new PIXI.NineSlicePlane(PIXI.Texture.from(bigImgPath), 7, 7, 7, 7)
+const background = new PIXI.mesh.NineSlicePlane(PIXI.Texture.from(bigImgPath), 7, 7, 7, 7)
 background.yoga.fromConfig(buttonBackgroundStyle);
 background.yoga.rescaleToYoga = true; // set PIXI width/height to math Yoga layout
 button.addChild(background, buttonText);
