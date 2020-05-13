@@ -16,9 +16,9 @@ declare module "pixi.js" {
 
 }
 
-export function applyContainerPolyfill() {
+export function applyContainerPolyfill(proto: any = Container.prototype) {
 
-    Object.defineProperty(Container.prototype, "flex", {
+    Object.defineProperty(proto, "flex", {
         get(): boolean {
             return this.__flex;
         },
@@ -26,7 +26,7 @@ export function applyContainerPolyfill() {
             if (!this.flex && newFlex) {
                 this.children.forEach(child => {
                     this.yoga.addChild(child.yoga);
-                    if (this.flexRecursive && child instanceof PIXI.Container) {
+                    if (this.flexRecursive && child instanceof PIXI.Container && child.flex !== false) {
                         child.flexRecursive = true;
                     }
                 });
@@ -42,7 +42,7 @@ export function applyContainerPolyfill() {
         }
     });
 
-    Object.defineProperty(Container.prototype, "flexRecursive", {
+    Object.defineProperty(proto, "flexRecursive", {
         get(): boolean {
             return this.__flexRecursive;
         },
@@ -52,13 +52,13 @@ export function applyContainerPolyfill() {
         }
     });
 
-    const addChild = Container.prototype.addChild;
-    const removeChildren = Container.prototype.removeChildren;
-    const addChildAt = Container.prototype.addChildAt;
-    const removeChild = Container.prototype.removeChild;
-    const containerUpdateTransform = Container.prototype.updateTransform;
+    const addChild = proto.addChild;
+    const removeChildren = proto.removeChildren;
+    const addChildAt = proto.addChildAt;
+    const removeChild = proto.removeChild;
+    const containerUpdateTransform = proto.updateTransform;
 
-    Container.prototype.addChild = function (...children) {
+    proto.addChild = function (...children) {
         if (children.length === 1) {
             const child = children[0];
             if (this.flex) {
@@ -67,7 +67,7 @@ export function applyContainerPolyfill() {
                 this.yoga.addChild(child.yoga);
             }
 
-            if (this.flexRecursive && child instanceof PIXI.Container) {
+            if (this.flexRecursive && child instanceof PIXI.Container && child.flex !== false) {
                 child.flexRecursive = true;
             }
             this.emit(YogaLayout.NEED_LAYOUT_UPDATE);
@@ -76,14 +76,14 @@ export function applyContainerPolyfill() {
     }
 
 
-    Container.prototype.addChildAt = function (child, index) {
+    proto.addChildAt = function (child, index) {
         if (this.flex) {
             child.yoga = child.yoga || new YogaLayout(child);
             this.__hasYoga = true;
             this.yoga.addChild(child.yoga, index);
         }
 
-        if (this.flexRecursive && child instanceof PIXI.Container) {
+        if (this.flexRecursive && child instanceof PIXI.Container && child.flex !== false) {
             child.flexRecursive = true;
         }
         this.emit(YogaLayout.NEED_LAYOUT_UPDATE);
@@ -91,7 +91,7 @@ export function applyContainerPolyfill() {
     }
 
 
-    Container.prototype.removeChild = function (...children) {
+    proto.removeChild = function (...children) {
         if (children.length === 1) {
             const child = children[0];
             if (this.flex) {
@@ -102,15 +102,15 @@ export function applyContainerPolyfill() {
         return removeChild.call(this, ...children) as any;
     }
 
-    Container.prototype.removeChildren = function (beginIndex, endIndex) {
-        if (this.flex) {
+    proto.removeChildren = function (beginIndex, endIndex) {
+        if (this.__hasYoga) {
             const begin = beginIndex || 0;
             const end = typeof endIndex === 'number' ? endIndex : this.children.length;
             const range = end - begin;
 
             if (range > 0 && range <= end) {
                 const removed = this.children.slice(begin, range);
-                removed.forEach(child => this.yoga.removeChild(child.yoga))
+                removed.forEach(child => child.__hasYoga && this.yoga.removeChild(child.yoga))
             }
             this.emit(YogaLayout.NEED_LAYOUT_UPDATE);
         }
@@ -118,8 +118,8 @@ export function applyContainerPolyfill() {
     }
 
 
-    Container.prototype.updateTransform = function () {
-        if ((this.flex || this.flexRecursive || this.__hasYoga) && this.yoga.isRoot) {
+    proto.updateTransform = function () {
+        if (this.__hasYoga && this.__yoga.isRoot && YogaLayout.isRendering) {
             this.checkIfBoundingBoxChanged();
             this.updateYogaLayout();
         }

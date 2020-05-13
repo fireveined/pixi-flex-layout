@@ -32,20 +32,29 @@ export interface IYogaAnimationConfig {
     time: number;
     easing: (progress: number) => number;
 
+    shouldRunAnimation?(yoga: YogaLayout, prev: ComputedLayout, newLayout: ComputedLayout): boolean;
+
 }
 
 export class YogaLayout {
+
+    /**
+     * Internal value. True if we are currently in WebGLRenderer.render() (based on 'prerender' and 'postrender' events). Used to skip some updateTransform calls.
+     */
+    public static isRendering: boolean = true;
 
     /**
      * Experimental feature for building layouts independent of pixi tree
      */
     public static roots: Map<string, YogaLayout> = new Map();
     public static readonly LAYOUT_UPDATED_EVENT = "LAYOUT_UPDATED_EVENT";
+    public static readonly AFTER_LAYOUT_UPDATED_EVENT = "AFTER_LAYOUT_UPDATED_EVENT";
     public static readonly NEED_LAYOUT_UPDATE = "NEED_LAYOUT_UPDATE";
     public readonly target: DisplayObject;
     public readonly node: Yoga.YogaNode;
     public children: YogaLayout[] = [];
     public parent?: YogaLayout;
+
 
     /**
      * If set, position transitions will be animated
@@ -56,6 +65,12 @@ export class YogaLayout {
      * True if Yoga should manage PIXI objects width/height
      */
     public rescaleToYoga: boolean = false;
+
+    /**
+     * If true and rescaleToYoga===true, resizing will keep aspect ratio of obejct.
+     * Defaults to true on PIXI.Text and PIXI.Sprite.
+     */
+    public keepAspectRatio: boolean | undefined;
 
     private _width: YogaSize;
     private _height: YogaSize;
@@ -77,6 +92,13 @@ export class YogaLayout {
 
     private _gap: number = 0;
 
+
+    /**
+     * Internal values stored to reduce calls to nbind
+     */
+    private _marginTop: number = 0;
+    private _marginLeft: number = 0;
+
     constructor(pixiObject: DisplayObject = new DisplayObject()) {
         this.node = Yoga.Node.create();
         pixiObject.__hasYoga = true;
@@ -86,6 +108,10 @@ export class YogaLayout {
             this.width = this.height = "pixi";
         } else {
             this.width = this.height = "auto";
+        }
+
+        if (pixiObject instanceof PIXI.Text || pixiObject instanceof PIXI.Sprite) {
+            this.keepAspectRatio = true;
         }
 
         // broadcast event
@@ -140,6 +166,7 @@ export class YogaLayout {
         this.node.copyStyle(layout.node);
         this.rescaleToYoga = layout.rescaleToYoga;
         this.aspectRatio = layout.aspectRatio;
+        this.keepAspectRatio = layout.keepAspectRatio;
         this._width = layout._width;
         this._height = layout._height;
     }
@@ -164,8 +191,11 @@ export class YogaLayout {
 
 
     public removeChild(yoga: YogaLayout): void {
-        this.children = this.children.filter(child => child === yoga);
-        this.node.removeChild(yoga.node);
+        const length = this.children.length;
+        this.children = this.children.filter(child => child !== yoga);
+        if (length !== this.children.length) {
+            this.node.removeChild(yoga.node);
+        }
         yoga.parent = undefined;
     }
 
@@ -185,6 +215,11 @@ export class YogaLayout {
     }
 
     public update(): void {
+        if (!this.target.parent && this.parent) {
+            this.parent.removeChild(this);
+            return;
+        }
+
         if (this._needUpdateAsRoot && !this.parent) {
             this.recalculateLayout();
         }
@@ -203,8 +238,11 @@ export class YogaLayout {
             && !!this._height && this._height !== "pixi" && this._height !== "auto";
     }
 
+    public willLayoutWillBeRecomputed(): boolean {
+        return !this._cachedLayout;
+    }
 
-    public get computedLayout(): ComputedLayout {
+    public getComputedLayout(): ComputedLayout {
         if (!this._cachedLayout) {
             this._cachedLayout = this.node.getComputedLayout();
 
@@ -223,14 +261,14 @@ export class YogaLayout {
             // }
 
             // YOGA FIX for not working aspect ratio https://github.com/facebook/yoga/issues/677
-            if (this._aspectRatio) {
+            if (this._aspectRatio && this.keepAspectRatio) {
                 const newHeight = this.calculatedWidth / this._aspectRatio;
                 this._cachedLayout.top += (this.calculatedHeight - newHeight) / 2;
                 this._cachedLayout.height = newHeight;
                 this.height = this.calculatedHeight;
             }
 
-            if (this.animationConfig) {
+            if (this.animationConfig && (!this.animationConfig.shouldRunAnimation || this.animationConfig.shouldRunAnimation(this, this._lastLayout || this._cachedLayout, this._cachedLayout))) {
                 this._animation = {
                     fromX: this._lastLayout?.left || this._cachedLayout.left,
                     fromY: this._lastLayout?.top || this._cachedLayout.top,
@@ -302,6 +340,9 @@ export class YogaLayout {
      * @param value
      */
     public set width(value: YogaSize) {
+        if (this._width === value) {
+            return;
+        }
         this._width = value;
         if (value !== "pixi") {
             this.node.setWidth(value);
@@ -322,6 +363,9 @@ export class YogaLayout {
      * @param value
      */
     public set height(value: YogaSize) {
+        if (this._height === value) {
+            return;
+        }
         this._height = value;
         if (value !== "pixi") {
             this.node.setHeight(value);
@@ -498,12 +542,15 @@ export class YogaLayout {
 
 
     public set marginTop(value: number) {
-        this.node.setMargin(Yoga.EDGE_TOP, value)
-        this.requestLayoutUpdate();
+        if (this._marginTop !== value) {
+            this._marginTop = value;
+            this.node.setMargin(Yoga.EDGE_TOP, value)
+            this.requestLayoutUpdate();
+        }
     }
 
     public get marginTop(): number {
-        return this.node.getMargin(Yoga.EDGE_TOP).value || 0;
+        return this._marginTop;
     }
 
     public set marginBottom(value: number) {
@@ -516,12 +563,15 @@ export class YogaLayout {
     }
 
     public set marginLeft(value: number) {
-        this.node.setMargin(Yoga.EDGE_LEFT, value)
-        this.requestLayoutUpdate();
+        if (this._marginLeft !== value) {
+            this._marginLeft = value;
+            this.node.setMargin(Yoga.EDGE_LEFT, value)
+            this.requestLayoutUpdate();
+        }
     }
 
     public get marginLeft(): number {
-        return this.node.getMargin(Yoga.EDGE_LEFT).value || 0;
+        return this._marginLeft;
     }
 
     public set marginRight(value: number) {
