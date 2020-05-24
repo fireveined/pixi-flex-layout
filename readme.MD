@@ -52,6 +52,9 @@ _PIXI.Container.flex: boolean_
 _PIXI.Container.flexRecursive: boolean_
 > True to enable flex layout for ALL children of container (eg. whole scene)
 
+_object.__hasYoga: boolean
+> Checks if object has Yoga node bound
+
 #### Setting styles
 
 Styles can be se directly:
@@ -81,6 +84,8 @@ The same for `margin` and `border` properties.
 
 #### Size controlling
 `obj.yoga.rescaleToYoga: boolean` can be used and then pixi width/height will be controlled by yoga and set to match layout values.
+
+`obj.yoga.keepAspectRatio: boolean` can be used to keep aspect ratio of objects. Defaults to true on PIXI.Text and PIXI.Sprite.
 
 `obj.yoga.[width|height]` can take values: 
 ```js
