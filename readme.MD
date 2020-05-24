@@ -12,8 +12,9 @@ npm install pixi-flex-layout --save
 
 # Usage
 ```javascript
-import { initializeYogaLayout } from "pixi-flex-layout";
+import { initializeYogaLayout, yogaSetRenderer } from "pixi-flex-layout";
 initializeYogaLayout();
+yogaSetRenderer(pixiRenderer);
 
 const containerStyle  = {
     justifyContent: "space-between",
@@ -46,13 +47,16 @@ _initializeYogaLayout(options: IFlexLayoutOptions)_
 > Invoke once on app startup to initialize pixi.js polyfills. 
 Supported options: usePixiSharedTicker: boolean, default true
 
+_yogaSetRenderer(renderer: renderer: PIXI.WebGLRenderer | PIXI.CanvasRenderer)_
+> pixi-flex-layout will use renderer events to prevent unnecessary updateTransform calls. It's not neccesary, but will speed up calculations a lot.
+
 _PIXI.Container.flex: boolean_
-> True to enable flex layout for direct children of container
+> True to enable flex layout for direct children of container, or false to disable flex when flexRecursive is set
 
 _PIXI.Container.flexRecursive: boolean_
 > True to enable flex layout for ALL children of container (eg. whole scene)
 
-_object.__hasYoga: boolean
+_DisplayObject.\_\_hasYoga: boolean
 > Checks if object has Yoga node bound
 
 #### Setting styles
