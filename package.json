@@ -1,7 +1,7 @@
 {
   "name": "pixi-flex-layout",
   "author": "Matuesz Szymik@Fireveined",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "Flex layouts for pixi.js powered by Yoga",
   "keywords": [
     "pixi.js",
@@ -36,6 +36,6 @@
   },
   "peerDependencies": {},
   "dependencies": {
-    "yoga-layout-prebuilt": "^1.9.3"
+    "yoga-layout-prebuilt-low-memory": "^1.9.8"
   }
 }

@@ -1,4 +1,4 @@
-import * as yoga from "yoga-layout-prebuilt";
+import * as yoga from "yoga-layout-prebuilt-low-memory";
 
 export namespace YogaConstants {
 

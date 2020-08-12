@@ -1,4 +1,4 @@
-import * as Yoga from "yoga-layout-prebuilt";
+import * as Yoga from "yoga-layout-prebuilt-low-memory";
 import { YogaConstants } from "./YogaContants";
 import { YogaLayoutConfig } from "./YogaLayoutConfig";
 import { yogaAnimationManager } from "./YogaAnimationManager";
@@ -262,9 +262,9 @@ export class YogaLayout {
 
             // YOGA FIX for not working aspect ratio https://github.com/facebook/yoga/issues/677
             if (this._aspectRatio && this.keepAspectRatio) {
-                const newHeight = this.calculatedWidth / this._aspectRatio;
-                this._cachedLayout.top += (this.calculatedHeight - newHeight) / 2;
-                this._cachedLayout.height = newHeight;
+                const newWidth = this.calculatedHeight / this._aspectRatio;
+             //   this._cachedLayout.top += (this.calculatedHeight - newHeight) / 2;
+                this._cachedLayout.width = newWidth;
                 this.height = this.calculatedHeight;
             }
 
