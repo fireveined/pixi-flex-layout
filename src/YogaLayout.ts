@@ -71,6 +71,7 @@ export class YogaLayout {
      * Defaults to true on PIXI.Text and PIXI.Sprite.
      */
     public keepAspectRatio: boolean | undefined;
+    public aspectRatioMainDiemension: "height" | "width" = "height";
 
     private _width: YogaSize;
     private _height: YogaSize;
@@ -112,6 +113,10 @@ export class YogaLayout {
 
         if (pixiObject instanceof PIXI.Text || pixiObject instanceof PIXI.Sprite) {
             this.keepAspectRatio = true;
+        }
+
+        if (pixiObject instanceof PIXI.Text) {
+            this.aspectRatioMainDiemension = "width";
         }
 
         // broadcast event
@@ -262,10 +267,16 @@ export class YogaLayout {
 
             // YOGA FIX for not working aspect ratio https://github.com/facebook/yoga/issues/677
             if (this._aspectRatio && this.keepAspectRatio) {
-                const newWidth = this.calculatedHeight / this._aspectRatio;
-             //   this._cachedLayout.top += (this.calculatedHeight - newHeight) / 2;
-                this._cachedLayout.width = newWidth;
-                this.height = this.calculatedHeight;
+                if (this.aspectRatioMainDiemension === "height") {
+                    const newWidth = this.calculatedHeight / this._aspectRatio;
+                    //   this._cachedLayout.top += (this.calculatedHeight - newHeight) / 2;
+                    this._cachedLayout.width = newWidth;
+                    this.width = this.calculatedWidth;
+                } else {
+                    const newHeight = this.calculatedWidth / this._aspectRatio;
+                    this._cachedLayout.height = newHeight;
+                    this.height = this.calculatedHeight;
+                }
             }
 
             if (this.animationConfig && (!this.animationConfig.shouldRunAnimation || this.animationConfig.shouldRunAnimation(this, this._lastLayout || this._cachedLayout, this._cachedLayout))) {

@@ -132,12 +132,16 @@ export function applyDisplayObjectPolyfill(prototype: any = DisplayObject.protot
         const updated = this.__yoga.willLayoutWillBeRecomputed();
         const layout = this.__yoga.getComputedLayout();
 
-        if (updated || this.__yoga.animationConfig) {
+        if (updated || this.__yoga.animationConfig || this.__yoga.rescaleToYoga) {
             (this.transform as TransformStatic).position.set(layout.left, layout.top)
 
             if (this.__yoga.rescaleToYoga) {
-                (<any>this).width = layout.width;
-                (<any>this).height = layout.height;
+                if (this.__yoga.keepAspectRatio && !isNaN((<any>this.__yoga)._height)) {
+                    this.scale.set(layout.height / (<any>this.__yoga)._height);
+                } else {
+                    (<any>this).width = layout.width;
+                    (<any>this).height = layout.height;
+                }
             }
 
             if (updated) {

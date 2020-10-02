@@ -15,7 +15,8 @@ export namespace YogaConstants {
         "flex-end" = yoga.JUSTIFY_FLEX_END,
         "center" = yoga.JUSTIFY_CENTER,
         "space-between" = yoga.JUSTIFY_SPACE_BETWEEN,
-        "space-around" = yoga.JUSTIFY_SPACE_AROUND
+        "space-around" = yoga.JUSTIFY_SPACE_AROUND,
+        "space-evenly" = yoga.JUSTIFY_SPACE_EVENLY
     }
 
     export enum FlexWrap {
@@ -32,7 +33,7 @@ export namespace YogaConstants {
         "flex-start" = yoga.ALIGN_FLEX_START,
         "flex-end" = yoga.ALIGN_FLEX_END,
         "space-between" = yoga.ALIGN_SPACE_BETWEEN,
-        "space-around" = yoga.ALIGN_SPACE_AROUND
+        "space-around" = yoga.ALIGN_SPACE_AROUND,
     }
 
 
